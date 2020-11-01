@@ -1,5 +1,5 @@
+import os
 from PIL import Image
-from os.path import splitext
 
 def convert_png2jpg(image):
     '''
@@ -13,6 +13,6 @@ def convert_png2jpg(image):
     '''
     if not os.path.isfile(image):
         raise ValueError('Image not exists')  
-    filename, extension = splitext(image)
+    filename, extension = os.path.splitext(image)
     im = Image.open(image)
     im.save(filename + '.jpg')

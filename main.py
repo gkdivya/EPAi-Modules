@@ -21,27 +21,27 @@ if __name__ == "__main__":
 
     if(args.command == None):
         print(f'Program expects command line arguments, Allowed image operations are "j2p", "p2j", "res", "crp"')
-    else:
-        if(args.command == 'j2p'):
-            print('JPEG to PNG Converter')
-            print(f'j2p: {args.image}')
-            convert_jpeg2png(image=args.image)
+    elif(args.command == 'j2p'):
 
-        elif(args.command == 'p2j'):
-            print('PNG to JPEG Converter')
-            convert_png2jpg(image=args.image)
+        print('JPEG to PNG Converter')
+        print(f'j2p: {args.image}')
+        convert_jpeg2png(args.image)
 
-        elif(args.command == 'res_p'):
-            pass
+    elif(args.command == 'p2j'):
+        print('PNG to JPEG Converter')
+        convert_png2jpg(image=args.image)
 
-        elif(args.command == 'res_w'):
-            pass
+    elif(args.command == 'res_p'):
+        pass
 
-        elif(args.command == 'res_h'):
-            pass
+    elif(args.command == 'res_w'):
+        pass
 
-        elif(args.command == 'crp_px'):
-            pass
+    elif(args.command == 'res_h'):
+        pass
 
-        elif(args.command == 'crp_p'):
-            pass
+    elif(args.command == 'crp_px'):
+        pass
+
+    elif(args.command == 'crp_p'):
+        pass

@@ -1,5 +1,6 @@
+import os
 from PIL import Image
-from os.path import splitext
+
 
 def convert_jpeg2png(image):
     '''
@@ -14,6 +15,6 @@ def convert_jpeg2png(image):
     print("Inside JPEG 2 PNG file")
     if not os.path.isfile(image):
         raise ValueError('Image not exists')  
-    filename, extension = splitext(image)
+    filename, extension = os.path.splitext(image)
     im = Image.open(image)
     im.save(filename + '.png')
